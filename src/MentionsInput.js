@@ -844,7 +844,7 @@ class MentionsInput extends React.Component {
       }
 
       const regex = makeTriggerRegex(child.props.trigger, this.props)
-      const match = substring.match(regex)
+      const match = child.props.triggerMatch ? child.props.triggerMatch(substring, regex) : substring.match(regex)
       if (match) {
         const querySequenceStart =
           substringStartIndex + substring.indexOf(match[1], match.index)

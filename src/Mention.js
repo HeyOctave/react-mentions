@@ -28,6 +28,8 @@ Mention.propTypes = {
 
   renderSuggestion: PropTypes.func,
 
+  triggerMatch: PropTypes.func,
+
   trigger: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(RegExp),
